@@ -56,7 +56,7 @@ const previewCity = (cityResults) => {
 const getSearchResults = async () => {
   if (searchQuery.value !== '') {
     try {
-      const results = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${searchQuery.value}&limit=5&appid=${import.meta.env.VITE_OPEN_WEATHER_KEY}`)
+      const results = await axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${searchQuery.value}&limit=5&appid=${import.meta.env.VITE_OPEN_WEATHER_KEY}`)
       cityResults.value = results.data.reduce((a, c) => (a.map(e => e.state).includes(c.state) ? a : [...a, c]), [])
       searchError.value = false
     } catch {

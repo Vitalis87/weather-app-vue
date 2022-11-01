@@ -31,7 +31,7 @@
             <p>Feels like {{ Math.round(weatherData.main.feels_like) }}&deg;</p>
             <p class="capitalize">{{ weatherData.weather[0].description }}</p>
             <img class="w-[150px] h-auto"
-                :src="`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`" />
+                :src="`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`" />
         </div>
         <hr class="border border-white border-opacity-10 w-full" />
 
@@ -61,7 +61,7 @@
                     </p>
 
                     <img class="w-[50px] h-[50px] object-cover" :src="
-                        `http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`
+                        `https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`
                     " alt="" />
                     <div class="flex gap-2 flex-1 justify-end">
                         <p>H: {{ Math.round(day.main.temp_max) }}</p>
